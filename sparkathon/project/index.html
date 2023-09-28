@@ -25,12 +25,80 @@
             </div>
         </header>
         
-        
+        <button id="showTrending">Show Trending</button>
+        <button id="showNews">Show News</button>
         <section class="trends">
             <h2>Trending</h2>
-            <!-- Trending idea content goes here -->
+            <table class="trending-table" id="trending-table">
+                <tr>
+                    <th>Rankings</th>
+                    <th>Images</th>
+                    <th>Names</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="image1.jpg" alt="Image 1"></td>
+                    <td>Name 1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="image2.jpg" alt="Image 2"></td>
+                    <td>Name 2</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </table>
         </section>
-
+        
+        <section class="new">
+            <h2>News</h2>
+            <table class="new-table" id="new-table">
+                <tr>
+                    <th>Rankings</th>
+                    <th>Images</th>
+                    <th>Names</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="image1.jpg" alt="Image 1"></td>
+                    <td>Name 1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="image2.jpg" alt="Image 2"></td>
+                    <td>Name 2</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </table>
+        </section>
+    
+        
+        <script>
+            // Function to show the specified table and hide others
+            function showTable(tableId) {
+                const tables = document.querySelectorAll('table');
+                tables.forEach(table => {
+                    if (table.id === tableId) {
+                        table.style.display = 'table'; // Display the selected table
+                    } else {
+                        table.style.display = 'none'; // Hide other tables
+                    }
+                });
+            }
+        
+            // Initially show the trending table
+            showTable("trending-table");
+        
+            // Button click event handlers
+            document.getElementById("showTrending").addEventListener("click", function () {
+                showTable("trending-table");
+            });
+        
+            document.getElementById("showNews").addEventListener("click", function () {
+                showTable("new-table");
+            });
+        </script>
+        
+        
         <footer>
             <p>&copy; 2023 DIP - Decentralised Idea Platform</p>
         </footer>

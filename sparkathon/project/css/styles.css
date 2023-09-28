@@ -170,6 +170,25 @@ article {
     flex-direction: column;
     min-height: 66.1vh;
 }
+/* Style the trending table */
+.trending-table {
+    border-collapse: collapse; /* Remove all borders between cells */
+    width: 100%;
+}
+
+.trending-table th, .trending-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.trending-table th {
+    background-color: #007bff00; /* Header background color */
+    color: #000000; /* Header text color */
+}
+
+.trending-table tr:nth-child(even) {
+    background-color: #f2f2f200; /* Alternate row background color */
+}
 
 /* Style your footer as needed */
 footer {
