@@ -1,0 +1,181 @@
+Reset some default styles
+body, h1, h2, ul, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling, customize as needed */
+body {
+    background-color: rgb(219, 217, 217); /* Change this background color as desired */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    color: #2674a1;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure the header is in front of other content */
+}
+
+/* Style the navigation links */
+header nav ul li a {
+    font-family: "Open Sans", sans-serif; /* Replace "Your-Font-Family" with the desired font */
+    font-weight: bold;
+    font-size: 25px;
+    position: relative; /* Add a position context for the pseudo-element */
+    text-decoration: none; /* Remove the default underline */
+    color: #007BFF; /* Set the link color */
+    transition: color 0.3s; /* Add transition for color change */
+}
+
+/* Create the animated underline with ::before pseudo-element */
+header nav ul li a::before {
+    content: "";
+    position: absolute;    
+    width: 0; /* Start with no width */
+    height: 2px; /* Set the thickness of the underline */
+    bottom: 0;
+    left: 50%; /* Start from the middle */
+    background-color: #007BFF;
+    transform: translateX(-50%); /* Center the underline */
+    transform-origin: center;
+    transition: width 0.3s, background-color 0.3s; /* Add transitions for width and color change */
+}
+
+/* Apply underline on hover */
+header nav ul li a:hover::before {
+    width: 100%; /* Expand the width to 100% */
+    background-color: #0056b3; /* Change underline color on hover */
+}
+
+/* Define the wiggle animation */
+@keyframes wiggle {
+    0% {
+        transform: translateX(-50%) translateX(-5px); /* Move left by 5px */
+    }
+    50% {
+        transform: translateX(-50%) translateX(5px); /* Move right by 5px */
+    }
+    100% {
+        transform: translateX(-50%) translateX(-5px); /* Move left by 5px */
+    }
+}
+
+
+/* Align the image to the left */
+.left-aligned {
+    float: left;
+    margin-right: 20px; /* Add some spacing to the right of the image */
+}
+
+body {
+    padding-top: 220px; /* Adjust this value to match your header's height */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    padding: 20px;
+}
+
+/* Style the product block container */
+.product-block {
+    display: flex; /* Use flexbox */
+}
+
+/* Style individual product blocks */
+article {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-right: 20px; /* Add margin to create space to the right of each block */
+    text-align: center;
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+/* Remove margin from the last product block to prevent extra space */
+.product-block article:last-child {
+    margin-right: 0;
+}
+
+
+
+/* Style the search bar container */
+.search-bar {
+    text-align: center;
+    margin-top: 15px; /* Adjust the margin to position it vertically within the header */
+}
+
+/* Style the search input */
+#search-input {
+    padding: 10px;
+    width: 500px; /* Adjust the width as needed */
+    border-radius: 20px; /* Oval shape */
+}
+
+
+/* Style the search link */
+#search-button {
+    font-family: "Your-Font-Family", sans-serif; /* Replace "Your-Font-Family" with the desired font */
+    position: relative; /* Add a position context for the pseudo-element */
+    text-decoration: none; /* Remove the default underline */
+    color: #007BFF; /* Set the link color */
+    transition: color 0.3s; /* Add transition for color change */
+}
+
+/* Create the animated underline for the search link */
+#search-button::before {
+    content: "";
+    position: absolute;
+    width: 0; /* Start with no width */
+    height: 2px; /* Set the thickness of the underline */
+    bottom: 0;
+    left: 50%; /* Start from the middle */
+    background-color: #007BFF;
+    transform: translateX(-50%); /* Center the underline */
+    transform-origin: center;
+    transition: width 0.3s, background-color 0.3s; /* Add transitions for width and color change */
+}
+
+/* Apply underline on hover for the search link */
+#search-button:hover::before {
+    width: 100%; /* Expand the width to 100% */
+    background-color: #0056b3; /* Change underline color on hover */
+}
+
+
+/* Set the minimum height of the page-container to 100vh */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 66.1vh;
+}
+
+/* Style your footer as needed */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
