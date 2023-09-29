@@ -129,8 +129,6 @@ article a:not(.btn) {
 
 
 
-
-
 /* Remove margin from the last product block to prevent extra space */
 .product-block article:last-child {
     margin-right: 0;
@@ -226,6 +224,25 @@ article a:not(.btn) {
     flex-direction: column;
     min-height: 66.1vh;
 }
+/* Style the table container to display tables side by side */
+.table-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust the gap between tables as needed */
+    margin-top: 20px;
+}
+
+/* Styles for individual tables */
+.trending-table {
+    border-collapse: collapse;
+    width: 48%; /* Set the width of each table */
+}
+
+/* Rest of your existing table styles here */
+
+
+
+
 /* Style the trending table */
 .trending-table {
     border-collapse: collapse; /* Remove all borders between cells */
