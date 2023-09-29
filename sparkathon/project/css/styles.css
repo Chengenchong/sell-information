@@ -139,7 +139,7 @@ article a:not(.btn) {
 /* Style for the sliding button container */
 .button-container {
     display: flex;
-    justify-content: center; /* Center align the button container */
+    justify-content: flex-start; /* Center align the button container */
     margin-top: 20px;
 }
 
@@ -265,6 +265,23 @@ article a:not(.btn) {
 
 .new-table tr:nth-child(even) {
     background-color: #f2f2f200; /* Alternate row background color */
+}
+.product-block {
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-start; /* Align articles to the left */
+}
+.product-block article {
+    width: 25%; /* Adjust the width as needed to fit your design */
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.product-block img {
+    width: 100%; /* Set the image width to 100% to make them equal */
+    height: auto; /* Maintain the aspect ratio */
 }
 /* Style your footer as needed */
 footer {
