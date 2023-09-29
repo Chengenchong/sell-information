@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIP - Decentralised Idea Platform</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Header and button styles (same as previous) */
+
+        /* Container for the tables */
+        .table-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px; /* Adjust the gap between tables as needed */
+            margin-top: 20px;
+        }
+
+        /* Styles for individual tables */
+        table {
+            flex: 1; /* Each table takes an equal amount of space within the container */
+            border-collapse: collapse;
+            width: 100%;
+            max-width: calc(50% - 10px); /* Two tables side by side with some spacing */
+        }
+
+        table th,
+        table td {
+            padding: 8px 12px; /* Adjust the padding as needed */
+            border: 1px solid #ddd; /* Add borders to table cells */
+            text-align: left; /* Align text to the left */
+        }
+
+        table th {
+            background-color: #f2f2f2; /* Add a background color to header cells */
+        }
+
+    </style>
 </head>
 <body>
     <div class="page-container">
@@ -57,8 +89,7 @@
                     <td><img src="3.png" alt="Image 1" width="150" height="150"></td>
                     <td>Name 2</td>
                     <td>3.999 SOL</td>
-                </tr>
-                <!-- Add more rows as needed -->
+                
             </table>
         </section>
         
