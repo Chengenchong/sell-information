@@ -7,38 +7,46 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <img src="DIP_logo.png" alt="Header Image" class="left-aligned">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product.html">Idea</a></li>
-                <li><a href="Information.html">Information</a></li>
+    <div class="page-container">
+        <header>
+            <div class="header-content">
+                <img src="DIP_logo.png" alt="Header Image" class="left-aligned">
+                
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Idea</a></li>
+                        <li><a href="Information.html">Information</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search Informations, Ideas ...">
+                    <a href="#" id="search-button">Search</a>
+                </div>
+            </div>
+        </header>
 
-            </ul>
-        </nav>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search...">
-            <a href="#" id="search-button">Search</a>
-        </div>
-    </header>
-
-    <section class="product-block">
-        <article>
-            <h2>Idea 1</h2>
-            <p>Value: 85%</p>
-            <p>Trustworthiness: 90%</p>
-            <p>Reliability: 88%</p>
-            <a href="transaction-history.html">Transaction History</a>
-        </article>
-        <article>
-            <h2>Idea 1</h2>
-            <p>Value: 85%</p>
-            <p>Trustworthiness: 90%</p>
-            <p>Reliability: 88%</p>
-            <a href="transaction-history.html">Transaction History</a>
-        </article>
-    </section>
+        <section class="product-block">
+            <a href="product-detail1.html" style="text-decoration: none; color: #000;">
+                <article>
+                    <h2>Idea 1</h2>
+                    <p>Value: 85%</p>
+                    <p>Trustworthiness: 90%</p>
+                    <p>Reliability: 88%</p>
+                </article>
+            </a>
+            <a href="product-detail.html" style="text-decoration: none; color: #000;">
+                <article>
+                    <h2>Idea 2</h2>
+                    <p>Value: 75%</p>
+                    <p>Trustworthiness: 95%</p>
+                    <p>Reliability: 90%</p>
+                </article>
+            </a>
+        </section>
+        
+    
 
     <footer>
         <p>&copy; 2023 DIP - Decentralised Idea Platform</p>

@@ -31,7 +31,7 @@ header nav ul li a {
     font-size: 25px;
     position: relative; /* Add a position context for the pseudo-element */
     text-decoration: none; /* Remove the default underline */
-    color: #007BFF; /* Set the link color */
+    color: #000000; /* Set the link color */
     transition: color 0.3s; /* Add transition for color change */
 }
 
@@ -43,7 +43,7 @@ header nav ul li a::before {
     height: 2px; /* Set the thickness of the underline */
     bottom: 0;
     left: 50%; /* Start from the middle */
-    background-color: #007BFF;
+    background-color: #000000;
     transform: translateX(-50%); /* Center the underline */
     transform-origin: center;
     transition: width 0.3s, background-color 0.3s; /* Add transitions for width and color change */
@@ -52,7 +52,7 @@ header nav ul li a::before {
 /* Apply underline on hover */
 header nav ul li a:hover::before {
     width: 100%; /* Expand the width to 100% */
-    background-color: #0056b3; /* Change underline color on hover */
+    background-color: #000000; /* Change underline color on hover */
 }
 
 /* Define the wiggle animation */
@@ -79,9 +79,17 @@ body {
     padding-top: 220px; /* Adjust this value to match your header's height */
 }
 
+/* Add these styles to make all header elements display side by side */
+.header-content {
+    display: flex;
+    align-items: center; /* Vertically center-align the content */
+}
+
+/* Style the navigation links */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Remove the default margin */
 }
 
 nav ul li {
@@ -113,17 +121,64 @@ article {
     box-sizing: border-box; /* Include padding and border in the width calculation */
 }
 
+/* Remove the link appearance for product block text */
+article a:not(.btn) {
+    text-decoration: none !important; /* Use !important to ensure it overrides other styles */
+    color: #000; /* Set the text color to black */
+}
+
+
+
+
+
 /* Remove margin from the last product block to prevent extra space */
 .product-block article:last-child {
     margin-right: 0;
 }
 
+/* Style for the sliding button container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center align the button container */
+    margin-top: 20px;
+}
+
+/* Style for the sliding button container */
+.sliding-button-container {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+/* Style for the sliding buttons */
+.sliding-button {
+    background-color: transparent;
+    color: #333; /* Change this to your desired text color (shadow color) */
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #333; /* Change this to your desired border color (shadow color) */
+    position: relative;
+    transition: box-shadow 0.3s, background-color 0.3s;
+    font-weight: normal; /* Remove the bold style */
+    border-radius: 20px; /* Set the border-radius to create an oval shape */
+}
+
+/* Style for the active sliding button */
+.sliding-button.active {
+    background-color: #f0f0f0; /* Change this to your desired grey color */
+    color: #333; /* Change this to your desired text color (shadow color) */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when active */
+    font-weight: normal; /* Remove the bold style */
+    border-radius: 20px; /* Set the border-radius to create an oval shape */
+}
+
+
 
 
 /* Style the search bar container */
 .search-bar {
-    text-align: center;
-    margin-top: 15px; /* Adjust the margin to position it vertically within the header */
+    display: inline-block; /* Make the search bar occupy inline space */
+    vertical-align: middle; /* Vertically align it to the middle of the header */
+    margin-left: 20px; /* Add spacing between search bar and navigation links */
 }
 
 /* Style the search input */
@@ -133,17 +188,19 @@ article {
     border-radius: 20px; /* Oval shape */
 }
 
-
-/* Style the search link */
+/* Style the search button */
 #search-button {
     font-family: "Your-Font-Family", sans-serif; /* Replace "Your-Font-Family" with the desired font */
     position: relative; /* Add a position context for the pseudo-element */
     text-decoration: none; /* Remove the default underline */
-    color: #007BFF; /* Set the link color */
+    color: #000000; /* Set the link color */
     transition: color 0.3s; /* Add transition for color change */
+    display: inline-block; /* Make the button occupy inline space */
+    vertical-align: middle; /* Vertically align it to the middle of the header */
+    margin-left: 10px; /* Add spacing between search input and button */
 }
 
-/* Create the animated underline for the search link */
+/* Create the animated underline for the search button */
 #search-button::before {
     content: "";
     position: absolute;
@@ -151,18 +208,17 @@ article {
     height: 2px; /* Set the thickness of the underline */
     bottom: 0;
     left: 50%; /* Start from the middle */
-    background-color: #007BFF;
+    background-color: #000000;
     transform: translateX(-50%); /* Center the underline */
     transform-origin: center;
     transition: width 0.3s, background-color 0.3s; /* Add transitions for width and color change */
 }
 
-/* Apply underline on hover for the search link */
+/* Apply underline on hover for the search button */
 #search-button:hover::before {
     width: 100%; /* Expand the width to 100% */
-    background-color: #0056b3; /* Change underline color on hover */
+    background-color: #000000; /* Change underline color on hover */
 }
-
 
 /* Set the minimum height of the page-container to 100vh */
 .page-container {
@@ -190,6 +246,26 @@ article {
     background-color: #f2f2f200; /* Alternate row background color */
 }
 
+
+/* Style the new table */
+.new-table {
+    border-collapse: collapse; /* Remove all borders between cells */
+    width: 100%;
+}
+
+.new-table th, .new-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.new-table th {
+    background-color: #007bff00; /* Header background color */
+    color: #000000; /* Header text color */
+}
+
+.new-table tr:nth-child(even) {
+    background-color: #f2f2f200; /* Alternate row background color */
+}
 /* Style your footer as needed */
 footer {
     background-color: #333;

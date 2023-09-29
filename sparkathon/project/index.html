@@ -9,25 +9,35 @@
 <body>
     <div class="page-container">
         <header>
-            <img src="DIP_logo.png" alt="Header Image" class="left-aligned">
-            
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="product.html">Idea</a></li>
-                    <li><a href="Information.html">Information</a></li>
-
-                </ul>
-            </nav>
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder="Search...">
-                <a href="#" id="search-button">Search</a>
+            <div class="header-content">
+                <img src="DIP_logo.png" alt="Header Image" class="left-aligned">
+                
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Idea</a></li>
+                        <li><a href="Information.html">Information</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search Informations, Ideas ...">
+                    <a href="#" id="search-button">Search</a>
+                </div>
             </div>
         </header>
+
+    
         
-        <button id="showTrending">Show Trending</button>
-        <button id="showNews">Show News</button>
-        <section class="trends">
+        <div class="button-container">
+            <div class="sliding-button-container" id="buttonContainer">
+                <div class="sliding-button" id="showTrending">Show Trending</div>
+                <div class="sliding-button" id="showNews">Show News</div>
+            </div>
+        </div>
+        
+        
+        <section class="trends" id="trending-section">
             <h2>Trending</h2>
             <table class="trending-table" id="trending-table">
                 <tr>
@@ -49,8 +59,8 @@
             </table>
         </section>
         
-        <section class="new">
-            <h2>News</h2>
+        <section class="new" id="news-section" style="display: none;">
+            <h2>News</h2>            
             <table class="new-table" id="new-table">
                 <tr>
                     <th>Rankings</th>
@@ -102,6 +112,7 @@
         <footer>
             <p>&copy; 2023 DIP - Decentralised Idea Platform</p>
         </footer>
-    </div>   
+    </div>
+    <script src="script.js"></script>   
 </body>
 </html>
