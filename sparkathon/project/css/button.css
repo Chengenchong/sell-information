@@ -1,0 +1,49 @@
+.connect-button{
+    background-color: #000000;
+    color: #f4f4f4;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 200px;
+    border-color: #464646;
+    margin-left: 50px;
+}
+.connect-button:hover {
+    background-color: #36353b;
+}
+
+.wallet-button-container {
+    display: flex;
+    margin-left: 50px; /* Move the entire button container 20px to the right */
+}
+.wallet-info {
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding-left: 0px;
+    position: relative;
+    bottom: 10px;
+}
+
+.wallet-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px 0px 0px 4px;
+    margin-right: 0px; /* Add space between the image and button */
+    margin-left: -50px;
+    padding: 0; /* Reset padding */
+}
+
+.wallet-button {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 4px 4px 0px;
+    font-family: Gilroy, sans-serif;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide the overflowing text */
+    text-overflow: ellipsis; /* Show ellipsis (...) for the overflow */
+    max-width: 200px; /* Set a maximum width for the button */
+}
