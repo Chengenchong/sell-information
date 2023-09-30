@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIP - Decentralised Idea Platform</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/button.css">
     <style>
         /* Header and button styles (same as previous) */
 
@@ -35,57 +36,6 @@
         table th {
             background-color: #f2f2f2; /* Add a background color to header cells */
         }
-
-        .connect-button{
-            background-color: #000000;
-            color: #f4f4f4;
-            width: 200px;
-            height: 50px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 200px;
-            border-color: #464646;
-            margin-left: 50px;
-        }
-        .connect-button:hover {
-            background-color: #36353b;
-        }
-
-        .wallet-button-container {
-            display: flex;
-            margin-left: 50px; /* Move the entire button container 20px to the right */
-        }
-        .wallet-info {
-            margin-top: 20px;
-            box-sizing: border-box;
-            padding-left: 0px;
-            position: relative;
-            bottom: 10px;
-        }
-
-        .wallet-image {
-            width: 50px;
-            height: 50px;
-            border-radius: 4px 0px 0px 4px;
-            margin-right: 0px; /* Add space between the image and button */
-            margin-left: -50px;
-            padding: 0; /* Reset padding */
-        }
-
-        .wallet-button {
-            background-color: #000000;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 0px 4px 4px 0px;
-            font-family: Gilroy, sans-serif;
-            white-space: nowrap; /* Prevent text from wrapping to the next line */
-            overflow: hidden; /* Hide the overflowing text */
-            text-overflow: ellipsis; /* Show ellipsis (...) for the overflow */
-            max-width: 200px; /* Set a maximum width for the button */
-        }
-
     </style>
 </head>
 <body>
@@ -207,47 +157,6 @@
                 showTable("new-table");
             });
 
-            // Function to handle the "Connect" button click
-            document.getElementById('connectButton').addEventListener('click', async () => {
-            // Check if the Phantom Wallet extension is installed
-            if (window.solana && window.solana.isPhantom) {
-                try {
-                    // Request connection to Phantom Wallet
-                    await window.solana.connect();
-
-                    // Get the connected wallet's public key
-                    const publicKey = window.solana.publicKey.toString();
-
-                    // Replace the "Connect" button with the wallet address and image
-                    document.getElementById('connectButton').style.display = 'none';
-                    document.getElementById('walletInfo').style.display = 'flex'; // Show wallet info container
-
-                    // Create an image element for the wallet image
-                    const walletImage = document.createElement('img');
-                    walletImage.src = 'phantom2.png'; // Set the image source
-                    walletImage.alt = 'Phantom Wallet Logo'; // Add alt text for accessibility
-                    walletImage.className = 'wallet-image'; // Apply CSS class
-
-                    // Create a button element for the wallet address
-                    const walletAddressButton = document.createElement('button');
-                    walletAddressButton.className = 'wallet-button';
-                    walletAddressButton.id = 'walletAddressButton';
-                    walletAddressButton.textContent = publicKey;
-
-                    // Append the image and button to the wallet info container
-                    const walletInfoContainer = document.getElementById('walletInfo');
-                    walletInfoContainer.appendChild(walletImage);
-                    walletInfoContainer.appendChild(walletAddressButton);
-
-                    alert('Connected to Phantom Wallet!');
-                } catch (error) {
-                    console.error('Error connecting to Phantom Wallet:', error);
-                    alert('Failed to connect to Phantom Wallet. Please make sure Phantom is installed and unlocked.');
-                }
-            } else {
-                alert('Phantom Wallet extension is not installed. Please install and unlock Phantom Wallet to continue.');
-            }
-            });
         </script>
         
         
@@ -255,6 +164,7 @@
             <p>&copy; 2023 DIP - Decentralised Idea Platform</p>
         </footer>
     </div>
-    <script src="script.js"></script>   
+    <script src="script.js"></script> 
+    <script src="button.js"></script>  
 </body>
 </html>
